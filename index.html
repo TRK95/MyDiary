@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Diary</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    header .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .notes {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .note {
+      background: #fffa8b;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .note:hover {
+      transform: rotate(-2deg) scale(1.02);
+    }
+    .note h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Personal</div>
+    <nav>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="notes">
+    <!-- Example notes, link to your PDFs -->
+    <div class="note" onclick="window.open('pdfs/2025-01-01.pdf', '_blank')">
+      <h3>2025-01-01</h3>
+      New Year Diary
+    </div>
+    <div class="note" onclick="window.open('pdfs/2025-02-14.pdf', '_blank')">
+      <h3>2025-02-14</h3>
+      Valentine’s Day
+    </div>
+    <div class="note" onclick="window.open('pdfs/2025-03-08.pdf', '_blank')">
+      <h3>2025-03-08</h3>
+      Women’s Day Diary
+    </div>
+  </main>
+</body>
+</html>
