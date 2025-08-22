@@ -4,31 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Diary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Indie Flower', cursive;
       background: #f8f9fa;
     }
     header {
       background: #fff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar {
       padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
     }
-    header .logo {
+    .navbar .logo {
       font-size: 20px;
       font-weight: bold;
     }
-    header nav a {
+    .navbar nav a {
       margin-left: 20px;
       text-decoration: none;
       color: #333;
       font-weight: 500;
+    }
+    .hero {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .hero img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 182, 193, 0.4); /* pastel hồng */
+      mix-blend-mode: multiply;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .hero-text p {
+      font-size: 20px;
+      margin-top: 10px;
     }
     .notes {
       display: grid;
@@ -56,13 +96,22 @@
 </head>
 <body>
   <header>
-    <div class="logo">Personal</div>
-    <nav>
-      <a href="#">Projects</a>
-      <a href="#">Blog</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
+    <div class="navbar">
+      <div class="logo">Personal</div>
+      <nav>
+        <a href="#">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <div class="hero">
+      <img src="header-image.jpg" alt="Header Image">
+      <div class="hero-text">
+        <h1>My Diary</h1>
+        <p>A collection of thoughts and moments</p>
+      </div>
+    </div>
   </header>
 
   <main class="notes">
